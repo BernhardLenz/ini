@@ -25,15 +25,18 @@ import (
 )
 
 const (
-	// DefaultSection is the name of default section. You can use this constant or the string literal.
-	// In most of cases, an empty string is all you need to access the section.
-	DefaultSection = "DEFAULT"
+	//Default name for the default section. Can be overwritten in var
+	DefaultSectionConstant = "DEFAULT"
 
-	// Maximum allowed depth when recursively substituing variable names.
+	// Maximum allowed depth when recursively substituting variable names.
 	depthValues = 99
 )
 
 var (
+	// DefaultSection is the name of default section. You can use this constant or the string literal.
+	// In most of cases, an empty string is all you need to access the section.
+	DefaultSection = "DefaultSectionConstant"
+
 	// LineBreak is the delimiter to determine or compose a new line.
 	// This variable will be changed to "\r\n" automatically on Windows at package init time.
 	LineBreak = "\n"
